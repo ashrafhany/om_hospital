@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="patient_tag_tree_view" model="ir.ui.view">
+        <field name="name">Patient.tag.list</field>
+        <field name="model">patient.tag</field>
+        <field name="arch" type="xml">
+            <list string="patient Tags" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_patient_tag" model="ir.actions.act_window">
+        <field name="name">Patient Tags</field>
+        <field name="res_model">patient.tag</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>
