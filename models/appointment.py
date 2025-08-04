@@ -9,6 +9,7 @@ class HospitalAppointment(models.Model):
     
     reference = fields.Char(string='Reference', required=True, copy=False, readonly=True, index=True, default=lambda self: 'New')
     patient_id = fields.Many2one('hospital.patient', string='Patient', required=True, tracking=True , ondelete='cascade')
+    doctor_id = fields.Many2one('hospital.doctor', string='Doctor', tracking=True)
     date_appointment = fields.Date(string='Date', tracking=True)
     note = fields.Text(string='Note')
     state = fields.Selection([

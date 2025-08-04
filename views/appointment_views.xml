@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <list string="Appointments">
                 <field name="patient_id"/>
+                <field name="doctor_id"/>
                 <field name="reference"/>
                 <field name="date_appointment" optional="show"/>
             </list>
@@ -29,6 +30,7 @@
                         <group>
                             <field name="reference"/>
                             <field name="patient_id"/>
+                            <field name="doctor_id"/>
                             <field name="date_of_birth"/>
                             <field name="date_appointment"/>
                         </group>
@@ -62,7 +64,7 @@
                 </sheet>
                 <chatter>
                     <field name="message_follower_ids"/>
-                    field name="message_ids"/>
+                    <field name="message_ids"/>
                 </chatter>
             </form>
         </field>
